@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { slideInAnimation } from './animations';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.sass'
+  imports: [RouterLink, RouterOutlet],
+  animations: [slideInAnimation],
+  standalone: true
 })
 export class AppComponent {
-  title = 'test';
+  
 }
